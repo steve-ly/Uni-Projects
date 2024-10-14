@@ -38,3 +38,13 @@ For my group project thesis, We had to develop a weight measuring system within 
 - Helped with assimalating the electrical components and software for the final design
 - Troubleshooting and testing of the final product
 ![Final design image](https://github.com/steve-ly/Uni-Projects/blob/main/thesis-part/final.jpg)
+
+### Robot Design
+For this project, it was divided into 4 separate parts, ABC were down by me individually while D was a group project where we had to decide whose parts we would use to combine into 1
+singular code base. While all 3 parts used were mine, I did not contribute to the refactoring and combination. Additionally, D also included extra functionality. This project comprised of python,
+c++ and webots.
+Part A:
+
+
+
+
