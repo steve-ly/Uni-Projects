@@ -1,0 +1,3 @@
+PART A - PartA('filename') -> does not use api
+PART B - PartB('filename') -> uses api -> only works for 2 data sets, tried trouble shooting during consulations with tutors to no avail
+PART C - PartC('filename') -> will ask for input from user for initial bias guess
