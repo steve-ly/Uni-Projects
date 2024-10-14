@@ -20,4 +20,12 @@ Source code for a mechatronics project to develop a complete software package to
 - Camera
 Additionally, created visual representation using opengl, of the lidar as well as display location and heading of the robot and its gps location.
 
-
+### Autonomous Systems
+Solution to problems in Autonomous Systems simulated data in Matlab
+P1 implementing data processing and extraction for simulated data of a UGV:
+-  Adds deckreckoning function
+-  Process LiDar scan
+-  Estimation of positions of Objects of interests
+P2 Continues of p2:
+- Adds EKF localization
+- Adds estimation of ugv pose and gyroscope bias
