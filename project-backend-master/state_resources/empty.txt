@@ -1,0 +1,1 @@
+This file is only here because otherwise Git will ignore the folder which is bad
