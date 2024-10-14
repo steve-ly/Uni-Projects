@@ -11,4 +11,13 @@ Source code for SoftEng Fundamentals course for flask backend development in pyt
 ### snake
 Source code for a mips project for Comp systems fundamentals, simulates the classice snake game using mips.
 
+### ugv-code
+Source code for a mechatronics project to develop a complete software package to control the Unmanned Ground Vehicle (UGV) using C++ with .NET frameworks. Modules included:
+- Authentication for remote connection
+- Laser
+- GNSS
+- Motion Control
+- Camera
+Additionally, created visual representation using opengl, of the lidar as well as display location and heading of the robot and its gps location.
+
 
