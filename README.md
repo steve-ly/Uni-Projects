@@ -29,3 +29,12 @@ P1 implementing data processing and extraction for simulated data of a UGV:
 P2 Continues of p2:
 - Adds EKF localization
 - Adds estimation of ugv pose and gyroscope bias
+
+### Thesis
+For my group project thesis, We had to develop a weight measuring system within a dialysis chair. For my part I :
+- Create and designed the code that runs on the arduino
+- Made a rudimentary prototype to test software on, made from an arduino uno, SparkFun Qwiic Scale, load cell and some scrap electronics and parts for the load cell base.
+![https://github.com/steve-ly/Uni-Projects/blob/main/thesis-part/prototype.jpg]
+- Helped with assimalating the electrical components and software for the final design
+- Troubleshooting and testing of the final product
+![https://github.com/steve-ly/Uni-Projects/blob/main/thesis-part/final.jpg]
