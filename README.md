@@ -63,7 +63,7 @@ Combining all 3 parts of the code and developed more cababilities for the robot.
   
 ### palletizing
 This project required scripting in matlab to control the URE 5 robot arm for a palletising task based on the tower of hanoi problem.
-The robot would use a vacuum gripper attachment to lift up planks of wood of varying size. Included is a demo of the algorithm.
+The robot would use a vacuum gripper attachment to lift up planks of wood of varying size. For a video demo you can find it here: [video link](https://drive.google.com/file/d/1-_TWV_ma9WwfPEhG4WtLi8QQHOPGrq6E/view?usp=drive_link)
 
 
 
