@@ -1,0 +1,8 @@
+ensure you are using mtrn4110 conda environment
+any video can be used as long is the maps is bounded by 1920x1080
+name video as mazevid note current video is extremely slow
+
+Ensure all cells are cleared, if not restart and run all cells for motiontracking.ipynb
+Program will detect the robot and encircle with red outline
+will also print out the robots current location in the top left corner.
+press q to exit out of video

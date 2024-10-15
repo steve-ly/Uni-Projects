@@ -1,0 +1,7 @@
+Open worlds and select exploration world
+Ensure controller is linked to epuck
+Do not change map.txt as it is the template for all maps explored
+The robot must start at 0,0 and face S as its default position, 
+You can move the walls as long as all cells are still vistable
+Speed up when running as its default speed is really slow
+Will output map to output.txt 

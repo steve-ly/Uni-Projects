@@ -1,0 +1,4 @@
+Run webots obstacleavoidance world, if no controller, link to obstacleAvoidance controller.
+Run the controller, fast forward as it is really slow
+When moving obstacles ensure the boxes are near the edges of the cells in the way of the path closet to the robot front sensor(distance sensors are unable to detect it otherwise)
+To change map, update the world file and map txt 
