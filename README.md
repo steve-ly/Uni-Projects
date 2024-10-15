@@ -1,5 +1,5 @@
 # University Projects
-Here lies the major projects I have worked on during my time in University
+Here lies some of the projects I have worked on during my time in University
 
 ### project-backend-master
 Source code for SoftEng Fundamentals course for flask backend development in python. This was a group project and my contributions include:
