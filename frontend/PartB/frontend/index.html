@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/x-icon" href="/img/l4w_small_whitebg.png" />
+    <title>LurkForWork</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- You can add your styles and scripts here -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="styles/provided.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    body {
+      background-image: url("/img/Background.png");
+      background-repeat: repeat;
+      background-size: cover;
+      height: 100vh;
+    }
+
+    .offcanvas {
+      visibility: visible;
+    }
+
+    .btn-primary {
+      background-color: #ffdc00;
+      color: black;
+      border-color: #ffdc00;
+    }
+
+    .btn-primary:hover {
+      background-color: black;
+      color: white;
+      border-color: black;
+    }
+
+    .btn-light:hover {
+      background-color: #df704d;
+      color: white;
+      border-color: #df704d;
+    }
+  </style>
+  <body>
+
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      data-bs-scroll="true"
+      id="notificationsOffcanvas"
+    >
+      <div class="offcanvas-header">
+        <h1 class="offcanvas-title">Notifications</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body"></div>
+    </div>
+
+    <div class="container bg-white border-bottom mb-2" style="border-radius: 1rem;">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar"></nav>
+    </div>
+
+    <template id="postWatch">
+      <div class="container" style="max-width: 700px">
+        <div class="row">
+          <div class="col-xl-3">
+            <div class="bg-white rounded-pill p-3 mt-2 shadow">
+              <div class="justify-content-between d-flex flex-row">
+                <img
+                  src="https://source.unsplash.com/random/20"
+                  alt="avatar"
+                  class="rounded-circle me-4"
+                  width="38px"
+                  height="38px"
+                  style="object-fit: cover"
+                  id="user-post-job"
+                />
+                <button
+                  class="rounded-pill btn btn-dark flex-grow-1 m-0 p-1"
+                  data-bs-toggle="modal"
+                  data-bs-target="#addJobPostModal"
+                >
+                  + Post
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-9">
+            <div class="bg-white rounded-pill p-3 mt-2 shadow">
+              <form class="">
+                <div class="justify-content-between d-flex flex-row">
+                  <h5 class="pt-2 m-0 me-2">Watch</h5>
+                  <input
+                    type="text"
+                    name=""
+                    id="watch-input"
+                    class="form-control border-2 rounded-pill"
+                    placeholder="Who do you want to watch?"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <!-- <template id="userListModal"> -->
+      <div
+        class="modal fade"
+        id="user-list-modal"
+        tabindex="-1"
+        aria-labelledby="user-list-modal-label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5">
+                <img
+                  src="img/like_icon.png"
+                  alt="like_icon"
+                  width="30"
+                  height="30"
+                  class="me-1"
+                  id="modal-icon"
+                />
+                <span id="user-list-modal-label">Likes</span>
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body" id="user-list"></div>
+          </div>
+        </div>
+      </div>
+    <!-- </template> -->
+
+    <div class="container">
+      <main role="main" id="main">
+      </main>
+      
+      <footer>
+        <p>&copy; lurkforwork.com 2022</p>
+      </footer>
+    </div>
+
+    
+
+
+    <script type="module" src="src/main.js"></script>
+    <script type="module" src="src/router.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+
+  <template id="me">
+    <div
+      class="container bg-warning bg-gradient text-center rounded-pill mb-2 align-items-center"
+      style="max-width: 700px"
+    >
+      <img
+        src="https://source.unsplash.com/random/1"
+        alt="avatar"
+        class="rounded-circle border border-white border-5 mt-3"
+        style="width: 150px; height: 150px; object-fit: cover"
+        id="my-img"
+      />
+      <h3 class="m-0" id="my-name">Hayden Smiff</h3>
+      <div>
+        <button
+          class="text-dark btn btn-link text-decoration-none mb-1 p-0 text-right"
+          id="my-watchees"
+        >
+          <img
+            src="img/watch_icon.png"
+            alt="watch_icon"
+            class="mb-1"
+            height="18px"
+            width="20px"
+          />
+          <span id="span-watchees">0</span>
+        </button>
+      </div>
+
+      <button class="btn btn-dark mb-3 rounded-pill" id="watch-me">
+        Watch
+      </button>
+      <button
+        class="btn btn-light mb-3 rounded-pill"
+        data-bs-toggle="modal"
+        data-bs-target="#editProfileModal"
+        id="edit-profile-button-user"
+      >
+        Edit
+      </button>
+    </div>
+
+    <div
+      class="container bg-light"
+      style="max-width: 700px; border-radius: 2rem;"
+      id="user-jobs"
+    >
+      <h3 class="ps-4 pt-3">Jobs</h3>
+    </div>
+      
+
+      
+
+  </template>
+
+  <div
+    class="modal fade"
+    id="editProfileModal"
+    tabindex="-1"
+    aria-labelledby="editProfileModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editProfileModalLabel">Edit Profile</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+            <div class="mb-3">
+              <label for="" class="form-label">Name</label>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter Name"
+                id="new-name"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label" id="new-email-label"
+                >Email address</label
+              >
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter Email"
+                id="new-email"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label" id="new-password-label"
+                >Password</label
+              >
+              <input
+                type="password"
+                class="form-control mb-1"
+                placeholder="Password"
+                id="new-password"
+              />
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Confirm password"
+                id="confirm-new-password"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label" id="profile-pic-label">Profile picture</label>
+              <input
+                type="file"
+                class="form-control"
+                id="new-image"
+                accept="image/*"
+              />
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button type="button" class="btn btn-primary" id="edit-button">
+            Save changes
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="modal fade"
+    id="addJobPostModal"
+    tabindex="-1"
+    aria-labelledby="addJobPostModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addJobPostModalLabel">Add post</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+            <div class="mb-3">
+              <label for="" class="form-label" id="new-role-title">Role</label>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter role"
+                id="addJobPost-title"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label" id="new-job-date"
+                >Start date</label
+              >
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter start date e.g 23/3/2023"
+                id="addJobPost-date"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label" id="new-job-about">About</label>
+              <textarea
+                class="form-control"
+                rows="3"
+                placeholder="Add more details for prospective jobseekers"
+                id="addJobPost-description"
+              ></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label" id="form-image-add">Image</label>
+              <input type="file" class="form-control" id="addJobPost-img" />
+              <div class="form-text">Base64 .jpeg files only</div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button type="button" class="btn btn-success" id="post-new-job">
+            Post
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <template id="error-modal">
+    <div
+      class="modal fade"
+      id="errorModal"
+      tabindex="-1"
+      aria-labelledby="errorModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="errorModalLabel">Error</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p id="errorContent">Enter error content here!</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template id="user-li">
+    <div class="d-flex align-items-center my-1">
+      <img
+        src="https://source.unsplash.com/random/1"
+        alt="avatar"
+        class="rounded-circle me-2"
+        style="width: 38px; height: 38px; object-fit: cover"
+        id="avatar"
+      />
+      <div class="p-3 rounded w-100">
+        <p class="fw-bold m-0 btn p-0" id="name">name</p>
+        <p class="m-0 fs-7 bg-gray rounded" id="email">email@email.com</p>
+      </div>
+    </div>
+    <hr />
+  </template>
+
+  <template id="notification">
+    <div class="d-flex align-items-center my-1">
+      <img
+        src="https://source.unsplash.com/random/1"
+        alt="avatar"
+        class="ms-2"
+        style="width: 38px; height: 38px; object-fit: cover"
+        id="avatar"
+      />
+      <div class="p-3 rounded w-100">
+        <p class="fw-bold m-0 btn p-0" id="name">name</p>
+        <p class="m-0 fs-7 bg-gray rounded" id="post">
+          made a new job post for "Pro Gamer"
+        </p>
+      </div>
+    </div>
+    <hr />
+  </template>
+
+  <!-- Modal -->
+  <!-- change place holders to current content -->
+  <div
+    class="modal fade"
+    id="editJobPostModal"
+    tabindex="-1"
+    aria-labelledby="editJobPostModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editJobPostModalLabel">Edit post</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+            <div class="mb-3">
+              <label for="" class="form-label" id="edit-role-label">Role</label>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter role"
+                id="editJobPost-role"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label" id="edit-start-label"
+                >Start date</label
+              >
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter start date e.g 23/3/2023"
+                id="editJobPost-date"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label" id="edit-about-label"
+                >About</label
+              >
+              <textarea
+                class="form-control"
+                rows="3"
+                placeholder="Add more details for prospective jobseekers"
+                id="editJobPost-about"
+              ></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Image</label>
+              <input type="file" class="form-control" id="editJobPost-img" />
+              <div class="form-text">Base64 .jpeg files only</div>
+            </div>
+            <div class="align-items-center">
+              <button type="button" class="btn btn-danger me-1" id="deletbtn">
+                Delete
+              </button>
+              <a class="form-text text-danger">PERMANENTLY delete this post</a>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+
+          <button type="button" class="btn btn-success" id="edit-job-post">
+            Post
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<template id="no-jobs-container">
+  <div class=" p-3 mt-2  text-center align-items-center" style="height: 500px; border-radius: 2rem;">
+    <div>
+      <img src="img/no_user_post_img.png" alt="no_post" class="img-fluid mt-2">
+      <h3 class="text-center mt-5">No Jobs, Space Empty</h3>
+      <p class="text-center text- text-muted mt-2 fs-6">Head to the home page to add posts!</p>
+    </div>  
+  </div>
+</template>
+
+<template id="no-posts-container">
+  <div class="container text-center align-items-center" style="max-width: 700px;" >
+    <div class="bg-white p-3 mt-3 shadow text-center align-items-center" style="height: 500px; border-radius: 2rem;">
+      <div>
+        <img src="img/no_post_img.png" alt="no_post" class="img-fluid mt-5">
+        <h3 class="text-center mt-5">No Posts yet</h3>
+        <p class="text-center text-muted mt-2">Watch somebody or add a post to get things going!</p>
+      </div>  
+    </div>
+  </div>
+</template>
+  
+
+</html>

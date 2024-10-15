@@ -1,0 +1,4 @@
+-Email and password inputs will highlight red for incorrect formatting
+-music plays during game and lobby
+-cute gif on lobby page
+-2.5.json can be found in ./src/gameFiles for testing json upload

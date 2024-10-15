@@ -1,0 +1,10 @@
+-Improved UI by using a colour scheme similar to kahoot 
+-Colours are harmonious 
+-Buttons with different purposes are coloured and shaped seperately for visual contrast. Blue buttons to return, Green to start, red to stop and x to delete. etc
+-Links and buttons have labels that states its purpose
+-User inputs for editing text allows users to submit with enter using a form
+-Text is large and readable
+-There is a clear visual heirachy e.g where each game card as edit options on its own container. The new question button is on top of the page
+-components are aligned and centered
+-Pattern Affordance using blue underlined text to imply a clickable link and mouse cursor changes when hovering over clickable items
+-Email and password inputs will highlight red for incorrect formatting
