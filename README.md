@@ -61,7 +61,9 @@ Combining all 3 parts of the code and developed more cababilities for the robot.
   - Exploration module which uses BFS algorithm to allow the robot to automatically map out the maze.
   - Obstacle avoidance module, which would use BFS to reroute the robot when its senses an object on the path.
   
-
+### palletizing
+This project required scripting in matlab to control the URE 5 robot arm for a palletising task based on the tower of hanoi problem.
+The robot would use a vacuum gripper attachment to lift up planks of wood of varying size. Included is a demo of the algorithm.
 
 
 
