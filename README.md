@@ -72,7 +72,7 @@ PartB: Created a React js frontend project with bootstrap for a quiz website
 ### Unreal Engine 5 project
 For computer graphics course, I had created a small game in unreal engine 5.
 This project required a lot of assets, some borrowed and customized whilst others I had made myself. The gameplay and interaction was done through the blueprint system. Additionally I also implemented a very basic Ai enemy
-within one of the difficulties as well as rigged the animations for it. 
+within one of the difficulties (Alien) as well as rigged the animations for it. 
 It is currently on a google drive due to its size:
 [Source code](https://drive.google.com/file/d/19JvxRDfNRCIZtBkcLZK71vVI5cYyGhNR/view?usp=drive_link)
 [Packaged Game](https://drive.google.com/file/d/10QhxezOSdgthsDnMqt3IjPpdvVIS4dv7/view?usp=drive_link)
