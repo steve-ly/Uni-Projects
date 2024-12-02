@@ -1,0 +1,11 @@
+flask
+flask_cors
+flask-mysql
+mysql-connector
+flask-sqlalchemy
+flask_marshmallow
+marshmallow_sqlalchemy
+icalendar
+flask_mail
+PyJWT==2.4.0
+bcrypt

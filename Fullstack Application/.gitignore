@@ -1,0 +1,5 @@
+node_modules
+database.json
+backend/src/setup\-db.py
+backend/src/private.py
+**/__pycache__/

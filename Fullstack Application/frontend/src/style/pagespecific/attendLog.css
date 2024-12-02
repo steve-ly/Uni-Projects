@@ -1,0 +1,58 @@
+.attendance-flex-container-log {
+    display: flex;
+    /*background-color: DodgerBlue;*/
+    justify-content: space-evenly;
+    height: 75vh;
+    margin: 5vh 0vh 5vh 0vh;
+    align-items: stretch;
+
+}
+.left-flex-container-log{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(184, 192, 200);
+    justify-content: center;
+    width:40vw;
+    border-radius: 15px;
+}
+
+.right-flex-container-log{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(184, 192, 200);
+    align-items: center; /* Center items horizontally */
+    width:40vw;
+    border-radius: 15px;
+
+
+}
+.button-flex{
+    display: flex;
+    /*background-color: rgb(230, 108, 78);*/
+    justify-content: space-evenly;
+    width:80%;
+    margin: 10%;
+}
+
+.select-headings{
+    font-size: 4.2vh;
+}
+
+.list-item-but5 {
+    padding: 15px !important;
+    margin-left: 2vw !important;
+    margin-top: 2px !important;
+    background-color: rgb(71,91,99) !important;
+    color: white !important;
+    border-radius: 5px !important;
+    text-align: left !important; /* Align text to the left */
+    display: flex;
+    align-items: center;
+    width: 90% !important;
+}
+
+.little-heading{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
