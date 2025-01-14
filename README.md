@@ -23,7 +23,7 @@ Additionally, created visual representation using opengl, of the lidar as well a
 ### Autonomous Systems
 Solution to problems in Autonomous Systems simulated data in Matlab
 P1 implementing data processing and extraction for simulated data of a UGV:
--  Adds deckreckoning function
+-  Adds deadreckoning function
 -  Process LiDar scan
 -  Estimation of positions of Objects of interests
 P2 Continues of p2:
